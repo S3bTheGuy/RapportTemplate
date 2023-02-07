@@ -1,0 +1,86 @@
+
+\documentclass[11pt, a4paper]{report}
+
+
+% Packages
+% Styling
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{fancyvrb}
+\usepackage[Glenn]{fncychap}
+\usepackage{setspace}
+\usepackage{wrapfig2}
+\usepackage{subfig}
+
+% Util
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{etoolbox}
+\usepackage{lipsum}
+\usepackage[backend=biber, style=authortitle-ibid, sorting=nty]{biblatex}
+\usepackage[hidelinks]{hyperref}
+\usepackage[danish]{cleveref} % Use instead of \ref and \pageref
+\usepackage{pdfpages} % For including pdfs
+
+% Lang
+\usepackage[english, danish]{babel}
+\usepackage{tcolorbox}
+
+
+% Preamble
+\lhead{\small{\textbf{Pedersen, Mikkel \\}}}
+\chead{\small{\textbf{Dansk \& Idéhistorie \\}}}
+\rhead{\small{\textbf{ZBC Teknisk Gymnasium \\ \today  }}}
+\rfoot{\thepage}
+\cfoot{}
+\patchcmd{\chapter}{\thispagestyle{plain}}{\thispagestyle{fancy}}{}{}
+\onehalfspacing
+\renewcommand{\familydefault}{phv}
+\addbibresource{main.bib} % Add bib file
+\setcounter{tocdepth}{3}
+% Dansk akademia påkræver at efternavnet kommer før fornavnet
+\DeclareNameAlias{author}{last-first}
+% Document
+
+\pagestyle{fancy}
+
+
+\begin{document}
+    \begin{titlepage}
+        \vspace*{1cm}
+        \centering\Huge{
+            \textbf{OPGAVE NAVN}} \\
+        \vspace{0.2cm}
+        \large{
+            PROJEKT NAVN  \\}
+        \small{FAG NAVN \\}
+
+        \vspace{0.3cm}
+        \large\textbf{DIT NAVN HER} \\
+        \vfill
+        \includegraphics[height=7cm]{images/ZBC logo} \\
+        \vfill
+        ZBC Handels og Teknisk Gymnasium Slagelse \\
+        Vejleder(e): VEJLEDER(E)  \\
+        \today
+    \end{titlepage}
+
+    \input{Chapters/Abstract}
+
+    \tableofcontents
+    \input{Chapters/Indledning}
+    \input{Chapters/Metode}
+    \input{Chapters/Redegørelse}
+    \input{Chapters/Analyse}
+    \input{Chapters/Diskussion}
+    \input{Chapters/Konklusion}
+
+
+
+
+    \printbibliography[heading=bibintoc]\nocite{*}
+    \input{Chapters/Appendix}
+
+
+\end{document}
