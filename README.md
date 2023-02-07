@@ -4,7 +4,7 @@
 ---
 
 ## Installation
-Før du kan bruge dette projekt kræver det at du har installeret en latex distribution. Personligt bruger jeg [MikTex](https://miktex.org/), men der findes også andre distributions.
+Før du kan bruge dette projekt kræver det at du har installeret en latex distribution. Personligt bruger jeg [MacTex](https://www.tug.org/mactex/), men der findes også andre distributions.
 Derudover kræver det også at du har biblatex installeret.
 
 ## Opsætning
