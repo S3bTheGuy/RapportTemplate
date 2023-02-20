@@ -14,8 +14,7 @@
 \usepackage{subfig}
 
 % Util
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
+\usepackage{fontspec}
 \usepackage{etoolbox}
 \usepackage{lipsum}
 \usepackage[backend=biber, style=authortitle-ibid, sorting=nty]{biblatex}
@@ -29,14 +28,16 @@
 
 
 % Preamble
-\lhead{\small{\textbf{DIT NAVN \\}}}
-\chead{\small{\textbf{FAG \\}}}
+
+\lhead{\small{\textbf{August Peter Wismann \&\\ Mikkel Helding Pedersen}}}
+\chead{\small{\textbf{Fysik B \\}}}
 \rhead{\small{\textbf{ZBC Teknisk Gymnasium \\ \today  }}}
 \rfoot{\thepage}
 \cfoot{}
+\setmainfont{Manrope}
+\setmonofont{JetBrains Mono}
 \patchcmd{\chapter}{\thispagestyle{plain}}{\thispagestyle{fancy}}{}{}
 \onehalfspacing
-\renewcommand{\familydefault}{phv}
 \addbibresource{main.bib} % Add bib file
 \setcounter{tocdepth}{3}
 % Dansk akademia påkræver at efternavnet kommer før fornavnet
@@ -49,20 +50,20 @@
 \begin{document}
     \begin{titlepage}
         \vspace*{1cm}
-        \centering\Huge{
-            \textbf{OPGAVE NAVN}} \\
+        \centering\huge{
+            \textbf{Droneflyvning og påvrkning af dynamisk opdrift}} \\
         \vspace{0.2cm}
         \large{
-            PROJEKT NAVN  \\}
-        \small{FAG NAVN \\}
+            Fysik Eksamsprojekt\\}
+        \small{Fysik B \\}
 
         \vspace{0.3cm}
-        \large\textbf{DIT NAVN HER} \\
+        \large\textbf{August Peter Wismann \& \\ Mikkel Helding Pedersen} \\
         \vfill
         \includegraphics[height=7cm]{images/ZBC logo} \\
         \vfill
         ZBC Handels og Teknisk Gymnasium Slagelse \\
-        Vejleder(e): VEJLEDER(E)  \\
+        Vejleder(e): Peter Rygaard Lassen  \\
         \today
     \end{titlepage}
 
@@ -70,8 +71,8 @@
 
     \tableofcontents
     \input{Chapters/Indledning}
+    \input{Chapters/Teori}
     \input{Chapters/Metode}
-    \input{Chapters/Redegørelse}
     \input{Chapters/Analyse}
     \input{Chapters/Diskussion}
     \input{Chapters/Konklusion}
