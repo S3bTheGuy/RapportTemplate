@@ -1,5 +1,5 @@
 # Rapport Template med Bjarne's Chapter stil 
-# original af [@HollowNumber](https://github.com/HollowNumber/RapportTemplate)
+# Original af [@HollowNumber](https://github.com/HollowNumber/RapportTemplate)
 
 ---
 
